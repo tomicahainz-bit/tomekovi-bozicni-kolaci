@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdf6f0;
+}
+
+header {
+    background: linear-gradient(135deg,#7a0c0c,#b22222);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+nav {
+    background: #5c0a0a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav button, nav a {
+    background: none;
+    border: none;
+    color: white;
+    padding: 14px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav button:hover, nav a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+#search {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #7a0c0c;
+}
+
+.card a {
+    color: #7a0c0c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background: #5c0a0a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+@media (max-width:600px) {
+    nav { flex-direction: column; }
+}

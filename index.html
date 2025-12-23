@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomekovi božićni kolači</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Tomekovi božićni kolači 🎄</h1>
+    <p>657 recepata za božićni stol</p>
+</header>
+
+<nav>
+    <button onclick="filterCategory('sve')">Sve</button>
+    <button onclick="filterCategory('kremasti')">Kremasti</button>
+    <button onclick="filterCategory('suhi')">Suhi</button>
+    <button onclick="filterCategory('bez-pecenja')">Bez pečenja</button>
+    <button onclick="filterCategory('cokoladni')">Čokoladni</button>
+</nav>
+
+<main>
+    <input id="search" type="text" placeholder="Pretraži recepte...">
+    <section id="recipes" class="recipes"></section>
+</main>
+
+<footer>
+    © 2025 Tomekovi božićni kolači
+</footer>
+
+<script src="js/recipes.js"></script>
+</body>
+</html>

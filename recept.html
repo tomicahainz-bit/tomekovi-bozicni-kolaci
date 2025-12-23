@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Božićni recept</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Božićni recept 🎄</h1>
+</header>
+
+<nav>
+    <a href="index.html">← Povratak na početnu</a>
+</nav>
+
+<main id="recipe-content">
+    <p>Učitavanje recepta...</p>
+</main>
+
+<footer>
+    © 2025 Tomekovi božićni kolači
+</footer>
+
+<script src="js/recipes.js"></script>
+<script>
+    function getRecipeFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('name');
+    }
+
+    function showRecipe() {
+        const name = getRecipeFromURL();
+        const contentDiv = document.getElementById('recipe-content');
+
+        if (!name) {
+            contentDiv.innerHTML = "<p>Nije odabran recept.</p>";
+            return;
+        }
+
+        const recipe = recipes.find(r => r.name === name);
+        if (!recipe) {
+            contentDiv.innerHTML = "<p>Recept nije pronađen.</p>";
+            return;
+        }
+
+        contentDiv.innerHTML = `
+            <h2>${recipe.name}</h2>
+            ${recipe.content}
+        `;
+    }
+
+    showRecipe();
+</script>
+
+</body>
+</html>
